@@ -11,15 +11,18 @@
 |
 */
 
+// CMS Routes Start
 Route::prefix('cms')->middleware(['auth'])->group(function() {
 
+    Route::get('/', function () { // After Login Dashboard
+        return view('cms::Dashboard.Dashboard');
+    });
 
-
-    // ***** Create profiles ***** \\
-Route::controller(CreateProfileController::class)->group(function () {
-    Route::get('/orders/{id}', 'show');
+Route::controller(CreateProfileController::class)->group(function () {// ***** Create profiles ***** \\
+    Route::get('/CreateProfile', 'create');
     Route::post('/orders', 'store');
-});
-    Route::get('/', 'CMSController@index');
+}); // CMS Route Close
+
+
 
 });
