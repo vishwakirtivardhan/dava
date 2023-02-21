@@ -11,11 +11,15 @@
 |
 */
 
-Route::prefix('cms')->group(function() {
-//     Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::prefix('cms')->middleware(['auth'])->group(function() {
 
-    // die(URL::current());
+
+
+    // ***** Create profiles ***** \\
+Route::controller(CreateProfileController::class)->group(function () {
+    Route::get('/orders/{id}', 'show');
+    Route::post('/orders', 'store');
+});
     Route::get('/', 'CMSController@index');
+
 });
