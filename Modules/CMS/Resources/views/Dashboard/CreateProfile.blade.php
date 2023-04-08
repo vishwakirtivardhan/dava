@@ -9,11 +9,12 @@
                         <div class="p-5">
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Profile!</h1>
+                                <livewire:cms::pages.dashboard />
                             </div>
                             <form class="user">
-                                    
-                            <livewire:cms::pages.dashboard />
                                 
+                                <div class="form-group row">
+                                    
                                     <x-input divSize="col-sm-3" type="text" name="testing" id="exampleFirstName" placeholder="Name" />
                                     <x-input divSize="col-sm-3" type="text" name="phone" id="exampleFirstName" placeholder="Phone" />
                                     <x-input divSize="col-sm-3" type="text" name="City" id="exampleFirstName" placeholder="City" />

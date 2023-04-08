@@ -8,7 +8,6 @@ class Dashboard extends Component
 {
     public function render()
     {
-        die('cdd');
         return view('cms::livewire.pages.dashboard');
     }
 }
