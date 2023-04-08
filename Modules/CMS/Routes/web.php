@@ -24,5 +24,10 @@ Route::controller(CreateProfileController::class)->group(function () {// ***** C
 }); // CMS Route Close
 
 
+// Hospial Module
+Route::resource('Hospital', HosptialController::class);
+
+
+
 
 });
